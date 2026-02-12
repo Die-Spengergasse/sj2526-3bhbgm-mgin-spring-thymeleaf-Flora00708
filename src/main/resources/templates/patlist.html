@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="p : ${patients}">
+            <tr th:each="p : ${patients}"> // wie eine foreach schleife, p ist das aktuelle element, patients ist die liste
                 <td th:text="${p.name}"></td>
                 <td th:text="${p.birth}"></td>
             </tr>
