@@ -5,17 +5,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.time.LocalDate;
-
 @Entity
-public class Patient {
-    // Id ist PK und wird automatisch zugewiesen
+public class Land {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-// attribute mit generierte getter setter
     private String name;
-    private LocalDate birth;
+    private String hauptstadt;
+    private int einwohner;
+
 
     public String getName() {
         return name;
@@ -25,11 +23,19 @@ public class Patient {
         this.name = name;
     }
 
-    public LocalDate getBirth() {
-        return birth;
+    public int getEinwohner() {
+        return einwohner;
     }
 
-    public void setBirth(LocalDate birth) {
-        this.birth = birth;
+    public void setEinwohner(int einwohner) {
+        this.einwohner = einwohner;
+    }
+
+    public String getHauptstadt() {
+        return hauptstadt;
+    }
+
+    public void setHauptstadt(String hauptstadt) {
+        this.hauptstadt = hauptstadt;
     }
 }

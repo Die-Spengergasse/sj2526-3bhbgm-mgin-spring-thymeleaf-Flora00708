@@ -14,6 +14,7 @@ public class HelloController {
 //get mapping heißt, das wenn get 8080 aufgerufen wird, kommt diese méthode dran
 // unter view --> tool windows --> endpoints, bekommt man alle dinge auf die man über die website kommt also welche in der adresse hinters / kommen könnnen
     // modell view controller konzept
+// für anderes projekt link ändern
     @GetMapping("")
     public  String index(Model model) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");

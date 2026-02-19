@@ -11,5 +11,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PatientRepository extends JpaRepository<Patient,Integer> {
+    // Patient ist die entity klasse, und Integer ist weil der Primary Key ein int ist, damit können wir auf die patienten zugreifen, die in der datenbank gespeichert sind, und wir können auch neue patienten hinzufügen, löschen und bearbeiten, das ist die standardfunktionalität von jpa repository, wir müssen nur die interface erweitern und die entity klasse und den primärschlüsseltyp angeben
 
 }
