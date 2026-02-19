@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StartController {
 
     @GetMapping("/start")
-    public String start(Model model) {
+    public String start() {
         return "start";
     }
 }
