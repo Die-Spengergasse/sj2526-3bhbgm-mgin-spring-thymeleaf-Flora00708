@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>LandList</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-<body>
-<h1>HIER IST LANDLIST</h1>
+<body style="background-color: lavenderblush;">
+<div class="container">
+    <h1>Länder Liste:</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>hauptstadt</th>
+            <th>einwohner</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="l : ${lands}"> <!-- wie eine foreach schleife, l ist das aktuelle element, lands ist die liste -->
+            <td th:text="${l.name}"></td>
+            <td th:text="${l.hauptstadt}"></td>
+            <td th:text="${l.einwohner}"></td>
+            <td>
+                <a th:href="@{/land/bearbeiten/{id}(id=${l.id})}">Bearbeiten</a>  <!-- {id} ist ein Platzhalter, der durch den tatsächlichen Wert von l.id ersetzt wird, damit man weiß welches gelöscht/ bearbeitet werden soll. -->
+                <a th:href="@{/land/delete(id=${l.id})}">Löschen</a>
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+    <p>
+        <a href="/land/add">land hinzufügen</a>
+    </p>
+</div>
 </body>
 </html>

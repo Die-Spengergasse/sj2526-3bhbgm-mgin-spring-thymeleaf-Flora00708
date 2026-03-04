@@ -10,5 +10,6 @@ public class StartController {
     @GetMapping("/start")
     public String start() {
         return "start";
+        // Startkontroller, man kommt hier hin, wenn man localhost:8080/start eingibt, dann wird die start.html angezeigt
     }
 }
